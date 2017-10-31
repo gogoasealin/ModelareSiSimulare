@@ -21,7 +21,7 @@ public class Main {
 			rezultat = lcg.Next();		
 			System.out.println(rezultat);
 		}
-		
+		//comentariu pentru github
 		System.out.println("Metoda MidSq ");
 		for(int i=0; i< 20 ; i++){
 			rezultat = midSq.Next();		
