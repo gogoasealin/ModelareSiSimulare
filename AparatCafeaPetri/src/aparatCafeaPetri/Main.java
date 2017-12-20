@@ -13,7 +13,7 @@ public class Main {
 		while(true)
 		{
 			System.out.println("Credit: " + petriNetMasinaDeCafea.GetCurrentState());
-			System.out.println("Introduceti o moneda intre 5 si 10 sau 1 pentru a cumpara cafea: ");
+			System.out.println("Introduceti o moneda intre 5 si 10 sau 0 pentru a cumpara cafea: ");
 			input = scanner.nextInt();
 			
 			if(petriNetMasinaDeCafea.GetCurrentState() == "starea20" || petriNetMasinaDeCafea.GetCurrentState() == "starea25")
@@ -34,11 +34,12 @@ public class Main {
 			{
 			petriNetMasinaDeCafea.Exec("goStarea10");
 			}
-			
-
-			
+				
+		
 			
 		}
+		
+
 		
 	}
 

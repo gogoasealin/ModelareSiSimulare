@@ -1,12 +1,12 @@
 package aparatCafeaPetri;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class PetriNetMasinaDeCafea extends PetriNet{
 
 	PetriNetMasinaDeCafea()
 	{
-		m_MatriceTranziti = new LinkedList<Tranzitie>();
+		m_MatriceTranziti = new ArrayList<Tranzitie>();
 		
 		Locatie starea0 = new Locatie("starea0");
 		Locatie starea5 = new Locatie("starea5");
@@ -17,66 +17,66 @@ public class PetriNetMasinaDeCafea extends PetriNet{
 		
 		starea0.UpdateJeton(1);
 		
-		m_MatriceTranziti.add(new Tranzitie("goStarea5", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("goStarea5", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea0));
 			add(new Arc(1, Directie.intrare, starea5));
 			}}
 		));
 		
-		m_MatriceTranziti.add(new Tranzitie("goStarea5", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("goStarea5", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea5));
 			add(new Arc(1, Directie.intrare, starea10));
 			}}
 		));
-		m_MatriceTranziti.add(new Tranzitie("goStarea5", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("goStarea5", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea10));
 			add(new Arc(1, Directie.intrare, starea15));
 			}}
 		));
 		
-		m_MatriceTranziti.add(new Tranzitie("goStarea5", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("goStarea5", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea15));
 			add(new Arc(1, Directie.intrare, starea20));
 			}}
 		));
 		
-		m_MatriceTranziti.add(new Tranzitie("goStarea5", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("goStarea5", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea20));
 			add(new Arc(1, Directie.intrare, starea25));
 			}}
 		));
 		
-		m_MatriceTranziti.add(new Tranzitie("goStarea10", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("goStarea10", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea0));
 			add(new Arc(1, Directie.intrare, starea10));
 			}}
 		));
 		
-		m_MatriceTranziti.add(new Tranzitie("goStarea10", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("goStarea10", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea5));
 			add(new Arc(1, Directie.intrare, starea15));
 			}}
 		));
 		
-		m_MatriceTranziti.add(new Tranzitie("goStarea10", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("goStarea10", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea10));
 			add(new Arc(1, Directie.intrare, starea20));
 			}}
 		));
 		
-		m_MatriceTranziti.add(new Tranzitie("goStarea10", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("goStarea10", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea15));
 			add(new Arc(1, Directie.intrare, starea25));
 			}}
 		));
 
-		m_MatriceTranziti.add(new Tranzitie("cumparare", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("cumparare", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea20));
 			add(new Arc(1, Directie.intrare, starea0));
 			}}
 		));
 		
-		m_MatriceTranziti.add(new Tranzitie("cumparare", new LinkedList<Arc>(){{
+		m_MatriceTranziti.add(new Tranzitie("cumparare", new ArrayList<Arc>(){{
 			add(new Arc(1, Directie.iesire, starea25));
 			add(new Arc(1, Directie.intrare, starea5));
 			}}
@@ -88,7 +88,7 @@ public class PetriNetMasinaDeCafea extends PetriNet{
 	{
 		for(Tranzitie tranzitie : m_MatriceTranziti)
 		{
-			LinkedList<Locatie> locatii = tranzitie.GetLocations();
+			ArrayList<Locatie> locatii = tranzitie.GetLocations();
 			for(Locatie locatie : locatii)
 			{
 				if(locatie.GetJeton() == 1)

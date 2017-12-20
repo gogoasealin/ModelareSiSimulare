@@ -5,9 +5,14 @@ public class Locatie {
 	String m_tag;
 	int m_jeton;
 	
-	Locatie(String Tag){
-		this.m_tag = Tag;
+    Locatie(String tag){
+		this.m_tag = tag;
 		m_jeton = 0;
+	}
+	
+    Locatie(String tag,int m_jeton){
+		this.m_tag = tag;
+		this.m_jeton = m_jeton;
 	}
 	
 	public boolean UpdateJeton(int valoare)

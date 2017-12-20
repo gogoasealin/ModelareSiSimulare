@@ -1,17 +1,18 @@
 package aparatCafeaPetri;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Tranzitie {
 	
 	String m_tag;
-	LinkedList<Arc> m_listaArce;
+	ArrayList<Arc> m_listaArce;
 	
 	
-	Tranzitie(String Tag, LinkedList<Arc> ListaArce)
+	Tranzitie(String Tag, ArrayList<Arc> arrayList)
 	{
 		this.m_tag = Tag;
-		this.m_listaArce = ListaArce;
+		this.m_listaArce = arrayList;
 		
 	}
 	
@@ -39,9 +40,9 @@ public class Tranzitie {
 		}
 	}
 	
-	public LinkedList<Locatie> GetLocations()
+	public ArrayList<Locatie> GetLocations()
 	{
-		LinkedList<Locatie> locatii = new LinkedList<Locatie>();
+		ArrayList<Locatie> locatii = new ArrayList<Locatie>();
 		for(Arc arc : m_listaArce)
 		{
 			locatii.add(arc.GetLocation());
